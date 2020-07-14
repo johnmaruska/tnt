@@ -1,6 +1,12 @@
-# tnt
+<div style="text-align: center">
+	<a href="https://twitter.com/Kukie_nyan/status/1282739600331440128">
+		<img height="300px" style="margin: auto" src="https://pbs.twimg.com/media/Ec003OmUcAAFxGi?format=jpg&name=large">
+	</a>
+</div>
 
-FIXME: Write a one-line description of your library/project.
+# T.N.T.
+
+T.N.T. (Toil 'n Trouble) is a D&D 5e character sheet application. Please do not use it to commit crimes.
 
 ## Overview
 
