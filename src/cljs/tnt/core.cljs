@@ -1,16 +1,15 @@
-(ns tnt.core
-  (:require
-   [reagent.dom :as rdom]))
+(ns ^:figwheel-hooks tnt.core
+  (:require [reagent.dom :as rdom]))
 
 (enable-console-print!)
 
-(println "This text is printed from src/tnt/core.cljs. Go ahead and edit it and see reloading in action.")
+(defn child []
+  [:p "Hi, I am child"])
 
-;; define your app data so that it doesn't get over-written on reload
+(defn mount []
+  (rdom/render [child] (js/document.getElementById "app")))
 
-(defn mount-root []
-  ;; (rdom/render [current-page] (.getElementById js/document "app"))
-  )
-
-(defn on-js-reload []
-  (mount-root))
+;; calls after each save, not on start
+(defn ^:after-load re-render [] (mount))
+;; calls only on start
+(defonce start-up (do (mount) true))

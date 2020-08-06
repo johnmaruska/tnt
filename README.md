@@ -8,37 +8,50 @@
 
 T.N.T. (Toil 'n Trouble) is a D&D 5e character sheet application. Please do not use it to commit crimes.
 
-## Overview
+# Developing Locally
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+Start up a figwheel-main REPL. This should automatically pull up a
+browser window to the app. Changes are hot-reloaded and should be
+immediately visible in the front-end. Once state is added from React
+then special care will need to be taken for it to load without issue.
+
+## In Emacs
+
+`M-x cider-jack-in-cljs` with tool=lein, repl=figwheel-main, build=dev
+
+## In a terminal
+
+    lein cljs-repl
 
 
-## Setup
+# Additional Setup
 
-Install all dependencies
+Automated tests
 
-    lein install
-    npm install
+Emacs integration
 
-Run the back-end server
+Confirmation of Windows execution
 
-    lein do clean, run
+Devtools? Anything on REPL launch?
 
-Run the front-end server
+Anything special for Firefox? Chrome? native?
 
-    lein figwheel
+# Additional Resources
 
-Figwheel should automatically open default browser at [localhost:3449](http://localhost:3449).
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+To use NPM: https://figwheel.org/docs/npm.html
 
-    (js/alert "Am I connected?")
+To use a custom-defined server:
+https://figwheel.org/docs/your_own_server.html
 
-and you should see an alert in the browser window.
+Advanced compilation for deployment:
+https://figwheel.org/docs/advanced_compile.html
 
-## License
+Devcards for testing:
+https://github.com/bhauman/devcards
+http://rigsomelight.com/devcards/#!/devdemos.core
+https://paultopia.github.io/posts-output/devcards-testing/
 
-Copyright © 2020 FIXME
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Code-Splitting for targeted loading:
+https://clojurescript.org/guides/code-splitting
+https://figwheel.org/docs/code_splitting.html
