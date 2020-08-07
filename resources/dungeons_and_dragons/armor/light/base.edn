@@ -1,4 +1,4 @@
-{:armor-type     :light
+{:type           :light
  :don            {:q 1 :u :minutes}
  :doff           {:q 1 :u :minutes}
  :armor-class-fn ['+ [:stat :DEX]]}
