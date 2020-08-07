@@ -1,0 +1,25 @@
+{;; things that don't matter, usually
+ :name      "Sildud"
+ :player    "John"
+ :age       30
+ :alignment :true-neutral
+ :speed     30
+ :subrace   nil
+ 
+ :base-stats {:strength     10
+              :dexterity    10
+              :constitution 13
+              :intelligence 12
+              :wisdom       14
+              :charisma     15}
+
+ :race {:name             :half-orc
+        :choosable-traits [{:name   "foo"
+                            :choice "foo"}]}
+
+ :levels {:warlock-1 {:class :warlock
+                      :level 1
+                      :choosable-traits [{:name   "patron"
+                                          :choice "hexblade"}
+                                         {:name   "warlock proficiencies"
+                                          :choice [:nature :intimidation]}]}}}

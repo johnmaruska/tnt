@@ -1,0 +1,103 @@
+{:name   "Sildud"
+ :player "John"
+
+ :stats {:strength     {:value 10 :bonus 0}
+         :dexterity    {:value 10 :bonus 0}
+         :constitution {:value 15 :bonus 0}
+         :intelligence {:value 19 :bonus 4}
+         :wisdom       {:value 14 :bonus 2}
+         :charisma     {:value 20 :bonus 5}}
+
+ :proficiency {:bonus 5}
+ :speed       {:walking {:q 30 :u :feet}}
+ :inspiration false
+
+ :health {:current 27
+          :max     99
+          :temp    0}
+
+ :armor-class 10
+ :initiative  {:bonus 0}
+
+ :saving-throws {:strength     {:proficient false
+                                :bonus      0}
+                 :dexterity    {:proficient false
+                                :bonus      0}
+                 :constitution {:proficient true
+                                :bonus      7}
+                 :intelligence {:proficient false
+                                :bonus      4}
+                 :wisdom       {:proficient false
+                                :bonus      2}
+                 :charisma     {:proficient false
+                                :bonus      10}}
+
+ :senses {:passive    {:perception    12
+                       :investigation 14
+                       :insight       17}
+          :darkvision {:q 120 :u :feet}}
+
+ :defenses   []
+ :conditions []
+
+ :skills {:acrobatics      {:proficient false
+                            :modifier   :dexterity
+                            :bonus      0}
+          :animal-handling {:proficient false
+                            :modifier   :wisdom
+                            :bonus      2}
+          :arcana          {:proficient true
+                            :modifier   :intelligence
+                            :bonus      9}
+          :athletics       {:proficient false
+                            :modifier   :strength
+                            :bonus      0}
+          :deception       {:proficient true
+                            :modifier   :charisma
+                            :bonus      10}
+          :history         {:proficient false
+                            :modifier   :intelligence
+                            :bonus      4}
+          :insight         {:proficient true
+                            :modifier   :wisdom
+                            :bonus      7}
+          :intimidation    {:proficient true
+                            :modifier   :charisma
+                            :bonus      10}
+          :investigation   {:proficient false
+                            :modifier   :intelligence
+                            :bonus      4}
+          :medicine        {:proficient false
+                            :modifier   :wisdom
+                            :bonus      2}
+          :nature          {:proficient false
+                            :modifier   :intelligence
+                            :bonus      4}
+          :perception      {:proficient false
+                            :modifier   :wisdom
+                            :bonus      2}
+          :performance     {:proficient false
+                            :modifier   :charisma
+                            :bonus      5}
+          :persuasion      {:proficient true
+                            :modifier   :charisma
+                            :bonus      10}
+          :religion        {:proficient false
+                            :modifier   :intelligence
+                            :bonus      4}
+          :sleight-of-hand {:proficient false
+                            :modifier   :dexterity
+                            :bonus      0}
+          :stealth         {:proficient false
+                            :modifier   :dexterity
+                            :bonus      0}
+          :survival        {:proficient false
+                            :modifier   :wisdom
+                            :bonus      2}}
+
+ :proficiencies {:armor   [:light]
+                 :weapons [:simple]
+                 :tools   [:cartographers-tools]}
+
+ :languages [:common, :gnomish, :orc]
+ }
