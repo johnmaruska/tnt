@@ -1,0 +1,4 @@
+{:name             "Leather armor"
+ :cost             {:gold 10}
+ :base-armor-class 11
+ :weight           10}

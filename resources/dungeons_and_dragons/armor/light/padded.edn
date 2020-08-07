@@ -1,0 +1,5 @@
+{:name             "Padded armor"
+ :cost             {:gold 5}
+ :base-armor-class 11
+ :stealth          :disadvantage
+ :weight           8}
