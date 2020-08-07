@@ -1,4 +1,5 @@
 (ns tnt.util.files
+  "Helper functions for working directly with files -- no wrapping concepts."
   (:require
    [clojure.java.io :as io]
    [clojure.edn :as edn]
@@ -10,7 +11,7 @@
       (and (string/starts-with? file-name "#")
            (string/ends-with? file-name "#"))))
 
-(defn remove-emacs-temp-files [files]
+(defn filter-temp-files [files]
   (filter #(not (is-emacs-temp-file? (.getName %))) files))
 
 (defn read-edn
@@ -36,8 +37,12 @@
     (instance? java.io.File dir) dir
     (string? dir) (io/file (str "./resources/" dir))))
 
-(defn list-files [dir]
-  (remove-emacs-temp-files (.listFiles (get-directory dir))))
+(defn list-files
+  "List all relevant files within a directory.
+
+  Ignores temporary files which shouldn't be committed to github anyway."
+  [dir]
+  (filter-temp-files (.listFiles (get-directory dir))))
 
 (defn expand-directories [dir]
   (map (fn [f]
