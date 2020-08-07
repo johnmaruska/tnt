@@ -28,7 +28,8 @@
       (throw e))))
 
 (defn read-file
-  "Simple wrapper around load-edn so it's easier to change if we want to include other file types."
+  "Simple wrapper around load-edn so it's easier to change if we want to
+  include other file types."
   [source]
   (read-edn source))
 
