@@ -1,27 +1,28 @@
-(ns tnt.server)
+(ns tnt.server
+  (:require [hiccup.page :refer [html5 include-css include-js]]))
 
-;; define index content
-(def home
-  "<!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link href=\"css/style.css\" rel=\"stylesheet\" type=\"text/css\">
-    <link rel=\"icon\" href=\"https://clojurescript.org/images/cljs-logo-icon-32.png\">
-  </head>
-  <body>
-    <div id=\"app\">Please don't show</div>
-    <script src=\"/cljs-out/dev-main.js\" type=\"text/javascript\"></script>
-  </body>
-  </html>")
+;; TODO: proper router using reitit-ring. with coercion, swagger, middleware, etc.
+
+(defn loading-page []
+  (html5
+   [:head
+    [:meta {:charset "UTF-8"}]
+    [:meta {:name "viewport"
+            :content "width=device-width, initial-scale=1"}]
+    (include-css "/css/style.css")]
+   [:body {:class "body-container"}
+    [:div#app [:h2 "Please don't show"]]
+    (include-js "/cljs-out/dev-main.js")]))
+
+(defn index-handler [_request]
+  {:status  200
+   :headers {"Content-Type" "text/html"}
+   :body    (loading-page)})
 
 (defn handler [request]
   (if (and (= :get (:request-method request))
            (= "/"  (:uri request)))
-    {:status 200
-     :headers {"Content-Type" "text/html"}
-     :body home}
+    (index-handler request)
     {:status 404
      :headers {"Content-Type" "text/plain"}
      :body "Not Found"}))
