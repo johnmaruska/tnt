@@ -1,4 +1,4 @@
-{:name             "Studded leather armor"
- :cost             {:gold 45}
- :base-armor-class 12
- :weight           13}
+{:name   "Studded leather armor"
+ :cost   {:gold 45}
+ :class  12
+ :weight 13}
