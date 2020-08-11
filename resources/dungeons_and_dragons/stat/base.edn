@@ -1,0 +1,1 @@
+{:bonus-fn ['round-up [/ [- [:character :stat 'any :bonus] 10] 2]]}
