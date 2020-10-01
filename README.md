@@ -55,3 +55,7 @@ https://paultopia.github.io/posts-output/devcards-testing/
 Code-Splitting for targeted loading:
 https://clojurescript.org/guides/code-splitting
 https://figwheel.org/docs/code_splitting.html
+
+
+prone library prone.middleware/wrap-exceptions
+https://github.com/magnars/prone
